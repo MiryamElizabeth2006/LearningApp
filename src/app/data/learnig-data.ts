@@ -13,7 +13,7 @@ export const learnigData:Course = {
         {
             id: 2,
             identification: 17542254654,
-            name: "Sofia",
+            name: "Lorena",
             surname: "Cardenas"
         },
         {
