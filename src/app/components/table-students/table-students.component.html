@@ -1,0 +1,12 @@
+<table class="table table-success table-striped">
+    <thead>
+      <th>CEDULA</th>
+      <th>NOMBRE</th>
+      <th>APELLIDO</th>
+    </thead>
+    <tbody>
+      @for (item of student; track $index) {
+        <student-item [item]="item"></student-item>
+      }
+    </tbody>
+  </table>

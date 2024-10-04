@@ -1,44 +1,18 @@
 <div class="container">
-    <div class="card my-5">
-      <div class="card-header">
-        <h3>INSTITUCIONES EDUCATIVAS</h3>
+  <div class="card my-5">
+    <div class="card-header">
+      <h3>INSTITUCIONES EDUCATIVAS</h3>
+    </div>
+    <div class="row">
+      <div class="col mx-3 my-3">
+        <company-view [course]="learning"></company-view>
       </div>
-      <div class="row">
-        <div class="col mx-3 my-3">
-          
-            <h3>CURSO</h3>
-            <div>
-              <ul class="list-group">
-                <li class="list-group-item">{{ learning.id }}</li>
-                <li class="list-group-item">{{ learning.name }}</li>
-              </ul>
-            </div>
-          
-        </div>
-        <div class="col mx-3 my-3">
-          <div>
-            <h3>ESTUDIANTES</h3>
-            <table class="table table-success table-striped">
-              <thead>
-                <th>ID</th>
-                <th>CEDULA</th>
-                <th>NOMBRE</th>
-                <th>APELLIDO</th>
-              </thead>
-              <tbody>
-                @for (item of learning.student; track $index) {
-                <tr>
-                  <td>{{ $index + 1}}</td>
-                  <td>{{ item.identification }}</td>
-                  <td>{{ item.name }}</td>
-                  <td>{{ item.surname }}</td>
-                </tr>
-                }
-              </tbody>
-            </table>
-          </div>
-        </div>
+    </div>
+    <div class="col mx-3 my-3">
+      <div>
+        <h3>ESTUDIANTES</h3>
+        <table-students [student]="learning.student"></table-students>
       </div>
     </div>
   </div>
-  
+</div>
